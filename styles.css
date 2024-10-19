@@ -1,0 +1,876 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/*-----------------Navigation Bar-----------------*/
+.navbar {
+    position: fixed; /* Fija la barra */
+    top: 0; /* Siempre en la parte superior */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: #f3f3f3; /* Color de fondo */
+    padding: 1.5vw 5vw;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+}
+.navbar .logo-container{
+    align-items: center;
+}
+.navbar .logo-container img {
+    width: 10vw; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+.navbar .company-name {
+    color: black;
+    font-size: 2vw;
+    font-weight: bold;
+    margin-left: 1vw;
+}
+
+.navbar .nav-links{
+    padding: 1.5vw 7.5vw;
+    margin-left: auto;
+}
+.navbar .nav-links a {
+    color: rgb(30, 84, 233);
+    text-decoration: none;
+    margin: 0 1vw;
+    font-size: 1.25vw;
+}
+.navbar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/*-----------------Sections-----------------*/
+
+.section {
+    height: flex; /* Cada sección ocupará el 100% del alto de la ventana */
+    padding: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------------- Inicio -----------------*/
+
+.section:nth-child(2) {
+    height: flex;
+    background:
+        /* Degradado de color azul */
+        linear-gradient(rgba(194, 194, 255, 0.4), 80%, rgba(218, 244, 255, 0.75)),
+        /* Imagen de fondo */
+        url('InicioBackground.jpg');
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 0.75vw double rgb(87, 57, 255);
+}
+
+.mainText {
+    display: flex;
+    color: white;
+    text-align: center;
+    font-size: 6vw;
+    font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+    font-weight: bold; /* Hacer que todo el texto esté en negrita */
+    margin-top: 10vw;
+}
+
+.frase-cool {
+    display: flex;
+    color: white;  /* Color opcional para cambiar el tono */
+    text-align: center;
+    font-size: 3vw;  /* Tamaño de la fuente para la frase secundaria */
+    font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+    margin-bottom: 10vw;
+}
+
+/*----------------- Quien somos -----------------*/
+
+/*----------------- Quien somos Part1 -----------------*/
+
+.section:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    background: 
+    linear-gradient(rgba(218, 244, 252, 0.75), white);
+}
+
+.text-s2{
+    flex: 1;
+    max-width: 40%;
+    margin-left: 10%;
+    font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+}
+
+.text-s2 h1 {
+    font-size: 2vw;
+    font-weight: bold;
+    color: black;
+}
+
+.text-s2 p {
+    font-size: 1.5vw;
+    color: #333;
+}
+
+.text-s2 strong {
+    font-weight: bold;
+}
+
+.image-s2 {
+    flex: 1;
+    max-width: 40%;
+    text-align: right;
+}
+
+.image-s2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/*----------------- Quien somos Part2 -----------------*/
+
+.container {
+    display: flex;
+    padding: 3vw;
+    background: 
+    linear-gradient(white, rgba(218, 244, 255, 0.75));
+    border-bottom: 0.75vw double rgb(87, 57, 255); 
+}
+
+.image-section {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 8vw;
+    width: 30%;
+}
+
+.image-section img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+
+.content-section {
+    width: 70%;
+    padding: 3vw;
+    font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+}
+
+.title {
+    text-align: center;
+    font-size: 2vw;
+    color: black;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw; /* Espacio entre columnas */
+    font-size: 1.25vw;
+}
+
+.column {
+    flex: 1;
+}
+
+.text-container p, ul {
+    line-height: 2;
+    color: #555;
+}
+
+.text-container ul {
+    list-style-type: disc;
+    padding-left: 3vw;
+}
+
+.text-container .highlight {
+    font-weight: bold;
+}
+
+/*----------------- Servicios -----------------*/
+
+.section:nth-child(5) {
+    background:
+    linear-gradient(rgba(218, 244, 255, 0.75), white);
+    height: flex; /* Cada sección ocupará el 100% del alto de la ventana */
+    border-bottom: 0.75vw double rgb(87, 57, 255); 
+}
+.titleServicios h1{
+    font-size: 4vw;
+}
+
+.listado {
+    border-radius: 0.8vw;
+    padding: 2vw;
+    list-style-type: none; /* Elimina los puntos por defecto */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Dos columnas */
+    gap: 3vw; /* Espacio entre los elementos */
+    font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+}
+
+.listado li {
+    position: relative;
+    display: flex;
+    padding-left: 3vw; /* Espacio para el tick */
+    font-size: 1.75vw;
+    color: #333;
+}
+
+.listado li::before {
+    content: "✔"; /* Tick */
+    position: absolute;
+    left: 0;
+    color: #4CAF50; /* Color del tick */
+    font-size: 2.4vw; /* Tamaño del tick */
+    top: 0.2vw; /* Alineación vertical */
+}
+.titleServicios {
+    text-align: center;
+    font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+    font-size: 2.4vw; /* Tamaño del tick */
+    color: black;
+    margin-top: 5vw;
+}
+
+
+/*----------------- Mutuas -----------------*/
+
+.section:nth-child(6) {
+    height: flex;
+    background-color: white; 
+    border-bottom: 0.75vw double rgb(87, 57, 255); }
+.titleMutuas {
+    text-align: center;
+    font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+    font-size: 2.4vw; /* Tamaño del tick */
+    color: black;
+    margin-top: 5vw;
+}
+.titleMutuas h1{
+    font-size: 4vw;
+}
+
+.titleMutuas p{
+    text-align: center;
+    align-items: center;
+    font-size: 2vw;
+}
+
+.image-mutuas {
+    text-align: center;
+    width: 100%;
+}
+
+.image-mutuas img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.image-mutuas2 {
+    display: none;
+}
+
+/*----------------- Reseñas -----------------*/
+.section:nth-child(7) { 
+    height: flex;
+    background-color: white; 
+    border-bottom: 0.75vw double rgb(87, 57, 255); 
+}
+
+
+.reviews-section {
+    background-color: #e6f7ff; /* Color de fondo de la sección de reseñas */
+    padding: 3vw;
+    border-radius: 1vw; /* Bordes redondeados */
+    margin: 2vw; /* Margen alrededor de la sección */
+    margin-top: 8vw;
+    margin-bottom: 8vw;
+    box-shadow: 0 0.2vw 1vw rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    display: flex; /* Usamos flexbox para alinear las reseñas */
+    justify-content: space-between; /* Espacio uniforme entre reseñas */
+    flex-wrap: wrap; /* Permite que las reseñas se ajusten a diferentes tamaños de pantalla */
+}
+
+.reviews-section h1{
+    font-size: 2.5vw;
+}
+
+.reviews-section h1 {
+    text-align: center; /* Centra el título */
+    color: black; /* Color del texto del título */
+    width: 100%; /* Asegura que el título ocupe todo el ancho */
+    font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+}
+
+.review {
+    background-color: #ffffff; /* Fondo blanco para cada reseña */
+    border: 0.1vw solid #cceeff; /* Borde ligero para cada reseña */
+    border-radius: 0.5vw; /* Bordes redondeados para cada reseña */
+    padding: 1vw; /* Espaciado interno */
+    margin: 0.5vw; /* Margen alrededor de cada reseña */
+    position: relative; /* Para posicionar las comillas */
+    box-shadow: 0 0.1vw 0.5vw rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    width: calc(30% - 20px); /* Ancho de cada reseña con ajuste por margen */
+}
+
+.review p {
+    margin: 0.5vw 0; /* Margen para el texto de las reseñas */
+    font-style: italic; /* Texto en cursiva para las reseñas */
+    font-size: 1.2vw;
+}
+
+.review span {
+    font-weight: bold; /* Resalta el nombre del revisor */
+    color: #005b99; /* Color del nombre del revisor */
+}
+
+.stars {
+    color: gold; /* Color dorado para las estrellas */
+    font-size: 1.8vw; /* Tamaño de las estrellas */
+    margin: 1vw 0; /* Espaciado superior e inferior */
+}
+
+.review::before {
+    content: '"'; /* Comillas al inicio */
+    font-size: 3.6vw; /* Tamaño de las comillas */
+    color: #007acc; /* Color de las comillas */
+    position: absolute; /* Posicionamiento absoluto */
+    top: -1vw; /* Ajuste vertical */
+    left: 1vw; /* Ajuste horizontal */
+}
+
+.review::after {
+    content: '"'; /* Comillas al final */
+    font-size: 3.6vw; /* Tamaño de las comillas */
+    color: #007acc; /* Color de las comillas */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: -1vw; /* Ajuste vertical */
+    right: 1vw; /* Ajuste horizontal */
+}
+
+
+
+/*----------------- Contacto -----------------*/
+.section:nth-child(8) { 
+    height: flex;
+    background-color: white; }
+
+.containerContacto {
+    width: 80%;
+    height: flex;
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 2vw; /* Espaciado interno */
+}
+
+.header {
+    text-align: center;
+    padding: 2vw;
+    margin-top: 5vw;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5vw; /* Tamaño del título */
+    font-weight: bold; /* Negrita para el título */
+    color: black; /* Color del texto */
+}
+
+.header p {
+    font-size: 1.5vw; /* Tamaño del subtítulo */
+    color: black; /* Color del subtítulo */
+}
+
+.contact-info {
+    display: flex; /* Usar flexbox para los elementos */
+    justify-content: space-around; /* Espaciado igual entre elementos */
+    background: white; /* Fondo blanco para el contenido */
+    border-radius: 1vw; /* Bordes redondeados */
+    padding: 2vw; /* Espaciado interno */
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-top: 2vw; /* Margen superior */
+    background-color: #e6f7ff; /* Color de fondo de la sección de reseñas */
+}
+
+.contact-item {
+    text-align: center; /* Centrar texto dentro de cada item */
+    font-size: 1.2vw; /* Tamaño del texto */
+    color: black; /* Color del texto */
+}
+
+.contact-item img {
+    width: 4vw; /* Tamaño de los iconos */
+    margin-bottom: 1vw; /* Margen inferior para separación */
+}
+
+.schedule {
+    
+    text-align: center; /* Centrar el texto */
+    font-size: 1.2vw; /* Tamaño del horario */
+    background: white; /* Fondo blanco */
+    border-radius: 1vw; /* Bordes redondeados */
+    padding: 2vw; /* Espaciado interno */
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin: 2vw 0; /* Margen superior e inferior */
+    background-color: #e6f7ff; /* Color de fondo de la sección de reseñas */
+}
+
+.schedule p {
+    margin: 0.5vw 0; /* Espaciado entre líneas */
+}
+
+.map {
+    width: 100%; /* Ancho completo para el mapa */
+    height: 30vw; /* Altura fija para el mapa */
+    border: 0.2vw solid #007acc; /* Borde azul para el mapa */
+}
+
+.map iframe {
+    width: 100%; /* Asegura que el iframe también ocupe el 100% del ancho */
+    height: 100%; /* Asegura que el iframe ocupe todo el alto del contenedor */
+    border: none; /* Elimina bordes del iframe */
+}
+
+    /* Media Queries */
+    @media only screen and (max-width: 768px) {
+
+        * {
+            box-sizing: border-box; /* Incluye padding y border en el ancho y alto total */
+        }
+
+
+    /*--------------Sections-------------*/
+
+    .section {
+        height: flex; /* Cada sección ocupará el 100% del alto de la ventana */
+        padding: 2vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*--------------NavBar-------------*/
+    .navbar {
+        position: fixed; /* Fija la barra */
+        flex-direction: column; /* Cambiar a columna */
+        align-items: center; /* Alinear en el centro */
+        top: 0; /* Siempre en la parte superior */
+        left: 0;
+        width: 100%; /* Ocupa todo el ancho */
+        background-color: #f3f3f3; /* Color de fondo */
+        padding: 1.5vw 0vw;
+        display: flex;
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.2); /* Añade una sombra sutil */
+    }
+    
+    .navbar .logo-container{
+        display: flex;               /* Usar Flexbox */
+        justify-content: center;     /* Centrar horizontalmente */
+        align-items: center;         /* Centrar verticalmente (opcional) */
+        width: 90%;                  /* Altura del contenedor (ajusta según necesites) */
+        border: 1px solid #ccc;    /* Solo para visualizar el contenedor */
+        margin-bottom: 2vw;
+    }
+
+    .navbar .logo-container img {
+        width: 20vw; /* Ajusta el tamaño del logo */
+        height: auto; /* Mantiene la proporción del logo */
+    }
+
+    .navbar .company-name {
+        font-size: 6vw; /* Reduce el tamaño de la fuente */
+    }
+
+    .navbar .nav-links {
+        display: flex;
+        flex-direction: row; /* Cambiar a columna para enlaces */
+        padding: 1.5vw 1vw;
+        width: 100%; /* Ocupar todo el ancho */
+        justify-content: space-between;
+    }
+
+    .navbar .nav-links a {
+        display: flex;
+        flex-grow: 1; /* Hacer que cada enlace crezca para ocupar el mismo ancho */
+        justify-content: center; /* Centra el texto dentro de cada enlace */
+        font-size: 3.25vw;
+        padding: 1vw 0; /* Añade algo de padding interno para hacer que los enlaces sean más altos */
+        text-align: center; /* Asegura que el texto esté centrado */
+    }
+
+
+    /*--------------Inicio-------------*/
+
+    .section:nth-child(2) {
+        height: 100vh;
+        background:
+            /* Degradado de color azul */
+            linear-gradient(rgba(140, 140, 255, 0.4), 80%, rgba(15, 183, 255, 0.75)),
+            /* Imagen de fondo */
+            url('InicioBackground.jpg');
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-bottom: 3vw double rgb(87, 57, 255);
+    }
+    
+    .mainText {
+        display: flex;
+        color: white;
+        text-align: center;
+        font-size: 12vw;
+        font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+        font-weight: bold; /* Hacer que todo el texto esté en negrita */
+        margin-top: 40vw;
+    }
+    
+    .frase-cool {
+        display: flex;
+        color: white;  /* Color opcional para cambiar el tono */
+        text-align: center;
+        font-size: 7vw;  /* Tamaño de la fuente para la frase secundaria */
+        font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+        margin-bottom: 20vw;
+    }
+    
+
+    /*--------------Quienes somos 1-------------*/
+
+    .section:nth-child(3) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: -20vw;
+        background: 
+            linear-gradient(to bottom, 
+            transparent 20vw, /* Transparent until 25vw */
+            rgba(218, 244, 252, 0.75) 0, /* Starts the gradient at 25vw */
+            white 100%); /* Gradually transitions to white */
+    }
+    
+    .text-s2 h1 {
+        text-align: center;
+        font-size: 8vw;
+    }
+
+    .text-s2{
+        max-width: 100%;
+        margin-left: 0%;
+        font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 25vw;
+    }
+
+    
+    .text-s2 p {
+        font-size: 6vw;
+    }
+    
+    .image-s2 {
+        max-width: 75%;  /* La imagen ocupará todo el ancho */
+        display: none;
+    }
+    
+    .image-s2 img {
+        width: 100%;  /* Puedes ajustar este valor según necesites */
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /*--------------Quienes somos 2-------------*/
+
+    .content-section {
+        width: 100%;
+        padding: 3vw;
+        font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
+    }
+    
+    .title {
+        text-align: center;
+        font-size: 4vw;
+    }
+
+    .container {
+        padding: 0;
+        border-bottom: 3vw double rgb(87, 57, 255);
+        flex-direction: column;
+    }
+    
+    .image-section {
+        width: 85%;
+    }
+    
+    .image-section img {
+        width: 85%;
+    }
+    
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0vw; /* Espacio entre columnas */
+        font-size: 5vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    
+    
+    .text-container p, ul {
+        line-height: 2;
+        color: #555;
+    }
+    
+    .text-container ul {
+        list-style-type: disc;
+        padding-left: 3vw;
+    }
+    
+    .text-container .highlight {
+        font-weight: bold;
+    }
+
+    /*--------------Servicios-------------*/
+
+
+    .section:nth-child(5) {
+        border-bottom: 3vw double rgb(87, 57, 255); 
+        margin-top: -20vw;
+        background: 
+        linear-gradient(to bottom, 
+        transparent 20vw, /* Transparent until 25vw */
+        rgba(218, 244, 252, 0.75) 0, /* Starts the gradient at 25vw */
+        white 100%); /* Gradually transitions to white */
+    }
+
+    .titleServicios h1{
+        font-size: 10vw;
+    }
+
+    .listado {
+        grid-template-columns: repeat(1, 1fr); /* Solo una columna */
+        font-size: 3vw; /* Ajustar tamaño de la fuente */
+
+        padding: 2vw;
+        list-style-type: none; /* Elimina los puntos por defecto */
+        display: grid;
+        gap: 12vw; /* Espacio entre los elementos */
+    }
+    
+    .listado li {
+        padding-left: 10vw; /* Espacio para el tick */
+        font-size: 6vw;
+    }
+    
+    .listado li::before {
+        font-size: 8vw; /* Tamaño del tick */
+        top: -1.75vw; /* Alineación vertical */
+    }
+    .titleServicios {
+        font-size: 5vw; /* Tamaño del tick */
+        margin-top: 25vw;
+    }
+
+
+    /*-----------Mutuas---------------------*/
+    .section:nth-child(6) {
+        border-bottom: 3vw double rgb(87, 57, 255);
+        margin-top: -20vw;
+        background: 
+        linear-gradient(to bottom, 
+        transparent 20vw, /* Transparent until 25vw */
+        rgba(255, 255, 255, 0.75) 0, /* Starts the gradient at 25vw */
+        white 100%); /* Gradually transitions to white */
+    }
+
+    .titleMutuas {
+        font-size: 5vw; /* Tamaño del tick */
+        margin-top: 25vw;
+    }
+
+    .titleMutuas h1{
+        font-size: 10vw;
+    }
+
+    .titleMutuas p{
+        text-align: center;
+        align-items: center;
+        font-size: 6vw;
+    }
+        
+    .image-mutuas {
+        display: none;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .image-mutuas2 {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .image-mutuas2 img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /*-----------Reseñas---------------------*/
+    .section:nth-child(7) { 
+        border-bottom: 3vw double rgb(87, 57, 255);
+        margin-top: -20vw;
+        background: 
+        linear-gradient(to bottom, 
+        transparent 20vw, /* Transparent until 25vw */
+        rgba(255, 255, 255, 0.75) 0, /* Starts the gradient at 25vw */
+        white 100%); /* Gradually transitions to white */
+    }
+        
+    .reviews-section {
+        flex-wrap: wrap; /* Permite que las reseñas se ajusten a diferentes tamaños de pantalla */
+        flex-direction: column; /* Cambia a columna */
+        align-items: center;
+        gap: 5vw;
+        margin-top: 25vw;
+    }
+
+    .reviews-section h1 {
+        font-size: 7vw;
+    }
+        
+    .review {
+        width: calc(100%); /* Ancho de cada reseña con ajuste por margen */
+        padding: 2vw;
+        padding-top: 4vw;
+    }
+        
+    .review p {
+        font-size: 5vw;
+    }
+        
+    .stars {
+        font-size: 5vw; /* Tamaño de las estrellas */
+    }
+        
+    .review::before {
+        content: '"'; /* Comillas al inicio */
+        font-size: 10vw; /* Tamaño de las comillas */
+        color: #007acc; /* Color de las comillas */
+        position: absolute; /* Posicionamiento absoluto */
+        top: -1vw; /* Ajuste vertical */
+        left: 1vw; /* Ajuste horizontal */
+    }
+        
+    .review::after {
+        content: '"'; /* Comillas al final */
+        font-size: 10vw; /* Tamaño de las comillas */
+        color: #007acc; /* Color de las comillas */
+        position: absolute; /* Posicionamiento absoluto */
+        bottom: -1vw; /* Ajuste vertical */
+        right: 1vw; /* Ajuste horizontal */
+    }
+    
+    /*---------------Contacto---------------------*/
+    .section:nth-child(8) { 
+        height: flex;
+        background: 
+        linear-gradient(to bottom, 
+        transparent 20vw, /* Transparent until 25vw */
+        rgba(255, 255, 255, 0.75) 0, /* Starts the gradient at 25vw */
+        white 100%); /* Gradually transitions to white */
+        margin-top: -20vw;
+    }
+    
+    .containerContacto {
+        width: 100%;
+        height: flex;
+        margin: 0 auto; /* Centrar el contenedor */
+        padding: 2vw; /* Espaciado interno */
+        margin-top: 25vw;
+    }
+    
+    .header {
+        text-align: center;
+        padding: 2vw;
+    }
+    
+    .header h1 {
+        font-size: 5vw; /* Tamaño del título */
+    }
+    
+    .header p {
+        font-size: 5vw; /* Tamaño del subtítulo */
+    }
+    
+    .contact-info {
+        display: flex; /* Usar flexbox para los elementos */
+        justify-content: space-around; /* Espaciado igual entre elementos */
+        background: white; /* Fondo blanco para el contenido */
+        border-radius: 1vw; /* Bordes redondeados */
+        padding: 5vw; /* Espaciado interno */
+        box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        margin-top: 2vw; /* Margen superior */
+        background-color: #e6f7ff; /* Color de fondo de la sección de reseñas */
+        flex-direction: row;
+    }
+    
+    .contact-item {
+        text-align: center; /* Centrar texto dentro de cada item */
+        font-size: 5vw; /* Tamaño del texto */
+        color: black; /* Color del texto */
+    }
+    
+    .contact-item img {
+        width: 10vw; /* Tamaño de los iconos */
+        margin-bottom: 1vw; /* Margen inferior para separación */
+    }
+    
+    .schedule {
+        text-align: center; /* Centrar el texto */
+        font-size: 5vw; /* Tamaño del horario */
+        background: white; /* Fondo blanco */
+        border-radius: 1vw; /* Bordes redondeados */
+        padding: 5vw; /* Espaciado interno */
+        box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        margin: 2vw 0; /* Margen superior e inferior */
+        background-color: #e6f7ff; /* Color de fondo de la sección de reseñas */
+    }
+    .schedule strong{
+        font-size: 6vw;
+    }
+    
+    .schedule p {
+        margin: 2vw 0; /* Espaciado entre líneas */
+    }
+    
+    .map {
+        width: 100%; /* Ancho completo para el mapa */
+        height: 60vw; /* Altura fija para el mapa */
+        border: 0.2vw solid #007acc; /* Borde azul para el mapa */
+    }
+    
+    .map iframe {
+        width: 100%; /* Asegura que el iframe también ocupe el 100% del ancho */
+        height: 100%; /* Asegura que el iframe ocupe todo el alto del contenedor */
+        border: none; /* Elimina bordes del iframe */
+    }
+
+
+}

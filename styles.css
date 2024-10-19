@@ -111,6 +111,7 @@ body {
     flex: 1;
     max-width: 40%;
     margin-left: 10%;
+    margin-top: 5vw;
     font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
 }
 
@@ -133,6 +134,7 @@ body {
     flex: 1;
     max-width: 40%;
     text-align: right;
+    margin-top: 5vw;
 }
 
 .image-s2 img {

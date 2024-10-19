@@ -516,7 +516,7 @@ body {
     /*--------------Inicio-------------*/
 
     .section:nth-child(2) {
-        height: 100vh;
+        height: flex;
         background:
             /* Degradado de color azul */
             linear-gradient(rgba(140, 140, 255, 0.4), 80%, rgba(15, 183, 255, 0.75)),

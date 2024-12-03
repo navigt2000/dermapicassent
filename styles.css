@@ -130,10 +130,10 @@ body {
     font-weight: bold;
 }
 
-
 .image-s2 {
     flex: 1;
     max-width: 40%;
+    max-height: 28.6%;
     text-align: center;
     margin-top: 5vw;
     position: relative;
@@ -148,20 +148,20 @@ body {
     overflow: hidden;
 }
 
-.slides {
+.image-s2 .carousel .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 500%; /* Ajusta según el número de imágenes */
     max-height: 20vw;
 }
 
-.slides img {
+.image-s2 .carousel .slides img {
     width: 20%; /* Asegura que las imágenes ocupen el contenedor */
     height: auto; /* Mantén proporciones */
     border-radius: 8px; /* Redondea las imágenes */
 }
 
-button.prev, button.next {
+.image-s2 .carousel button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -174,12 +174,16 @@ button.prev, button.next {
     border-radius: 50%; /* Botones redondeados */
 }
 
-button.prev {
+.image-s2 .carousel button.prev {
     left: 10px;
 }
 
-button.next {
+.image-s2 .carousel button.next {
     right: 10px;
+}
+
+.image-s2_2 {
+    display: none;
 }
 /*----------------- Quien somos Part2 -----------------*/
 
@@ -684,6 +688,61 @@ button.next {
     
     .text-container .highlight {
         font-weight: bold;
+    }
+
+    .image-s2_2 {
+        display:block;
+    }
+    .image-s2_2 {
+        flex: 1;
+        max-width: 100%;
+        max-height: 53.6%;
+        text-align: center;
+        margin-top: 5vw;
+        position: relative;
+        overflow: hidden;
+        margin-right: 0.5vw;
+    }
+    
+    .image-s2_2 .carousel {
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 0.8vw; /* Mantener el borde redondeado */
+        overflow: hidden;
+    }
+    
+    .image-s2_2 .carousel .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 500%; /* Ajusta según el número de imágenes */
+        max-height: 53.6vw;
+    }
+    
+    .image-s2_2 .carousel .slides img {
+        width: 20%; /* Asegura que las imágenes ocupen el contenedor */
+        height: auto; /* Mantén proporciones */
+        border-radius: 8px; /* Redondea las imágenes */
+    }
+    
+    .image-s2_2 .carousel button.prev, button.next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1;
+        border-radius: 50%; /* Botones redondeados */
+    }
+    
+    .image-s2_2 .carousel button.prev {
+        left: 5vw;
+    }
+    
+    .image-s2_2 .carousel button.next {
+        right: 5vw;
     }
 
     /*--------------Servicios-------------*/

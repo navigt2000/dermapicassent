@@ -253,6 +253,7 @@ body {
     height: flex; /* Cada sección ocupará el 100% del alto de la ventana */
     border-bottom: 0.75vw double rgb(87, 57, 255); 
 }
+
 .titleServicios h1{
     font-size: 4vw;
 }
@@ -294,10 +295,16 @@ body {
 
 /*----------------- Mutuas -----------------*/
 
+.image-mutuas2 {
+    display: none;
+}
+
 .section:nth-child(6) {
     height: flex;
     background-color: white; 
-    border-bottom: 0.75vw double rgb(87, 57, 255); }
+    border-bottom: 0.75vw double rgb(87, 57, 255);
+}
+
 .titleMutuas {
     text-align: center;
     font-family: Calibri, sans-serif; /* Usar la fuente Calibri */
@@ -324,10 +331,6 @@ body {
     width: 100%;
     height: auto;
     border-radius: 8px;
-}
-
-.image-mutuas2 {
-    display: none;
 }
 
 /*----------------- Reseñas -----------------*/
@@ -413,7 +416,9 @@ body {
 /*----------------- Contacto -----------------*/
 .section:nth-child(8) { 
     height: flex;
-    background-color: white; }
+    background-color: white;
+    margin-bottom: -10vw;
+}
 
 .containerContacto {
     width: 80%;
@@ -896,6 +901,7 @@ body {
         rgba(255, 255, 255, 0.75) 0, /* Starts the gradient at 25vw */
         white 100%); /* Gradually transitions to white */
         margin-top: -20vw;
+        margin-bottom: -30vw;
     }
     
     .containerContacto {

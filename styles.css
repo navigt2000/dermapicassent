@@ -130,17 +130,56 @@ body {
     font-weight: bold;
 }
 
+
 .image-s2 {
     flex: 1;
     max-width: 40%;
-    text-align: right;
+    text-align: center;
     margin-top: 5vw;
+    position: relative;
+    overflow: hidden;
+    margin-right: 5vw;
 }
 
-.image-s2 img {
-    width: 90%;
-    height: auto;
-    border-radius: 8px;
+.image-s2 .carousel {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 8px; /* Mantener el borde redondeado */
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 500%; /* Ajusta según el número de imágenes */
+    max-height: 20vw;
+}
+
+.slides img {
+    width: 20%; /* Asegura que las imágenes ocupen el contenedor */
+    height: auto; /* Mantén proporciones */
+    border-radius: 8px; /* Redondea las imágenes */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 50%; /* Botones redondeados */
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
 }
 /*----------------- Quien somos Part2 -----------------*/
 
